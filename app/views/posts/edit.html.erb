@@ -1,0 +1,34 @@
+ <h3>ユーザー編集</h3>
+ 
+  <%= render "shared/error", obj: @posts %>
+ 
+    <%= form_for @posts do |f| %>
+      <table>
+        <tr>
+          <th><%= f.label :title ,"タイトル" %></th>
+          <td><%= f.text_field :title %></td>
+        </tr>
+        <tr>
+          <th><%= f.label :begin_day ,"開始日" %></th>
+          <td><%= f.date_field :begin_day,  class: 'form-control' %></td>
+        </tr>
+        <tr>
+          <th><%= f.label :finish_day ,"終了日" %></th>
+          <td><%= f.date_field:finish_day ,class: 'form-control' %></td>
+        </tr>
+        <tr>
+          <th><%= f.label :all_day ,"終日" %></th>
+          <td><%= f.check_box :all_day %><br><%="終日の場合はチェックを入れます" %></td>
+        </tr>
+        <tr>
+          <th><%= f.label :schejule_memo ,"スケジュールメモ" %></th>
+          <td><%= f.text_area :schejule_memo %></td>
+        </tr>
+      </table>
+      <div>
+        <ul>
+          <li><%= f.submit "編集を完了する" %></li>
+          <li><%= link_to "ユーザー情報一覧に戻る", :posts %></li>
+        </ul>
+      </div>
+    <% end %>

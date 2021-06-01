@@ -1,0 +1,9 @@
+ja:
+  activerecord:
+    models:
+      post: ポスト #日本語化したいカラムがあるmodel名
+    attributes:
+      post:
+        title: タイトル
+        begin_day: 開始日
+        finish_day: 終了日
